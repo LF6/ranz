@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customer>
+  <cust>
+    <gender>Herr</gender>
+    <name>Super, Audo</name>
+    <birthday>01.01.1901</birthday>
+    <street>Hummerstraße 69</street>
+    <city>30000 Brummstadt</city>
+  </cust>
+  <cust>
+    <gender>Herr</gender>
+    <name>Knat, Hummer</name>
+    <birthday>01.01.1901</birthday>
+    <street>Katanweg 22</street>
+    <city>22314 Schwerter</city>
+  </cust>
+  <cust>
+    <gender>Herr</gender>
+    <name>Theis, Julian</name>
+    <birthday>01.01.1902</birthday>
+    <street>Udangstraße 22</street>
+    <city>22314 Hengenbild</city>
+  </cust>
+  <cust>
+    <gender>Herr</gender>
+    <name>Knitban, Super</name>
+    <birthday>04.07.1965</birthday>
+    <street>Audostraße 1</street>
+    <city>12345 Audostadt</city>
+  </cust>
+  <cust>
+    <gender>Herr</gender>
+    <name>Theis, Julian</name>
+    <birthday>22.11.1987</birthday>
+    <street>Superstraße 2</street>
+    <city>39473 Superstadt</city>
+  </cust>
+    <cust>
+    <gender>Herr</gender>
+    <name>Kasprzak, Stefan</name>
+    <birthday>26.02.1995</birthday>
+    <street>Ackerstraße 6</street>
+    <city>56727 Mayen</city>
+  </cust>
+    <cust>
+    <gender>Herr</gender>
+    <name>Perrone, Francis</name>
+    <birthday>04.07.1965</birthday>
+    <street>Löhrstraße 87</street>
+    <city>56787 Koblenz</city>
+  </cust>
+    <cust>
+    <gender>Herr</gender>
+    <name>Gottschalk, Tobias</name>
+    <birthday>25.08.1990</birthday>
+    <street>Löhrstraße 87</street>
+    <city>56787 Koblenz</city>
+  </cust>
+    <cust>
+    <gender>Herr</gender>
+    <name>Wirz, Christobal</name>
+    <birthday>04.07.1965</birthday>
+    <street>Watweißichweg 69</street>
+    <city>23472 IchVerfahrMich</city>
+  </cust>
+    <cust>
+    <gender>Herr</gender>
+    <name>Claar, Sascher</name>
+    <birthday>31.01.1967</birthday>
+    <street>Keineahnung 8</street>
+    <city>38361 weißichauchned</city>
+  </cust>
+</customer>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<statistics>
+  <bookings>
+    <economy>16</economy>
+    <business>9</business>
+    <suite>4</suite>
+  </bookings>
+  <cancellations>29</cancellations>
+</statistics>
