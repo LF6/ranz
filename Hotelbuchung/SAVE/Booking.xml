@@ -1,2 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bookings />
+<bookings>
+  <booking>
+    <name>Kasprzak, Stefan</name>
+    <birthday>26.02.1995</birthday>
+    <category>Business</category>
+    <arrangement>Halbpension</arrangement>
+    <from>19.03.2015</from>
+    <until>26.06.2015</until>
+  </booking>
+  <booking>
+    <name>Perrone, Francis</name>
+    <birthday>04.07.1965</birthday>
+    <category>Economy</category>
+    <arrangement>Vollpension</arrangement>
+    <from>19.03.2015</from>
+    <until>08.04.2015</until>
+  </booking>
+  <booking>
+    <name>Gottschalk, Tobias</name>
+    <birthday>25.08.1990</birthday>
+    <category>Economy</category>
+    <arrangement>Vollpension</arrangement>
+    <from>27.06.2015</from>
+    <until>02.08.2015</until>
+  </booking>
+  <booking>
+    <name>Claar, Sascher</name>
+    <birthday>31.01.1967</birthday>
+    <category>Suite</category>
+    <arrangement>Bed &amp; Breakfast</arrangement>
+    <from>16.04.2015</from>
+    <until>31.04.2015</until>
+  </booking>
+  <booking>
+    <name>Super, Audo</name>
+    <birthday>01.01.1901</birthday>
+    <category>Business</category>
+    <arrangement>Halbpension</arrangement>
+    <from>19.03.2015</from>
+    <until>22.03.2015</until>
+  </booking>
+  <booking>
+    <name>Knitban, Super</name>
+    <birthday>04.07.1965</birthday>
+    <category>Suite</category>
+    <arrangement>Vollpension</arrangement>
+    <from>30.03.2015</from>
+    <until>30.05.2015</until>
+  </booking>
+</bookings>
