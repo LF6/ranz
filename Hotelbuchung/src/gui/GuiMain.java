@@ -190,7 +190,6 @@ public class GuiMain extends JFrame {
 		OverviewFromYY = new JComboBox();
 		OverviewFromYY.setBounds(189, 57, 57, 20);
 		panel_4.add(OverviewFromYY);
-		OverviewFromYY.setSelectedItem(""+jahr);
 		
 		JLabel label_1 = new JLabel(" bis");
 		label_1.setHorizontalAlignment(SwingConstants.RIGHT);
@@ -208,7 +207,6 @@ public class GuiMain extends JFrame {
 		OverviewUntilYY = new JComboBox();
 		OverviewUntilYY.setBounds(431, 59, 57, 20);
 		panel_4.add(OverviewUntilYY);
-		OverviewUntilYY.setSelectedItem(""+jahr);
 		
 		JLabel lblNewLabel = new JLabel("Freie Zimmer");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -702,6 +700,9 @@ public class GuiMain extends JFrame {
 		for(int i=14; i<100; i++){
 			OverviewUntilYY.addItem("20"+i);
 		}
+		
+		OverviewUntilYY.setSelectedItem(""+jahr);
+		OverviewFromYY.setSelectedItem(""+jahr);
 		contentPane.setLayout(gl_contentPane);
 	}
 
