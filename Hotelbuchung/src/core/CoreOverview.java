@@ -91,7 +91,7 @@ public class CoreOverview implements ActionListener{
 					Date dateFrom = sdf.parse(datesFrom);
 					Date dateUntil = sdf.parse(datesUntil);
 					
-					if(((dateFrom.after(overviewDateFrom) || dateFrom.equals(overviewDateFrom)) && (dateFrom.before(overviewDateUntil) || dateFrom.equals(overviewDateUntil))) || ((dateUntil.after(overviewDateFrom) || dateUntil.equals(overviewDateFrom)) && (dateUntil.before(overviewDateUntil) || dateUntil.equals(overviewDateUntil)))){
+					if(((overviewDateFrom.after(dateFrom)|| dateFrom.equals(overviewDateFrom)) && (overviewDateUntil.before(dateUntil) || dateUntil.equals(overviewDateUntil))) || ((overviewDateUntil.after(dateFrom) || overviewDateUntil.equals(dateFrom)) && ((overviewDateFrom.before(dateUntil) || overviewDateFrom.equals(dateUntil))))){
 						overviewBook.add(rooms+": "+datesFrom+" - "+datesUntil);
 					}
 				}
