@@ -48,4 +48,52 @@
     <from>30.03.2015</from>
     <until>30.05.2015</until>
   </booking>
+  <booking>
+    <name>Super, Audo</name>
+    <birthday>01.01.1901</birthday>
+    <category>Economy</category>
+    <arrangement>Bed &amp; Breakfast</arrangement>
+    <from>22.04.2015</from>
+    <until>28.04.2015</until>
+  </booking>
+  <booking>
+    <name>Wirz, Christobal</name>
+    <birthday>04.07.1965</birthday>
+    <category>Economy</category>
+    <arrangement>Bed &amp; Breakfast</arrangement>
+    <from>04.04.2015</from>
+    <until>22.04.2015</until>
+  </booking>
+  <booking>
+    <name>Knitban, Super</name>
+    <birthday>04.07.1965</birthday>
+    <category>Economy</category>
+    <arrangement>Bed &amp; Breakfast</arrangement>
+    <from>22.04.2015</from>
+    <until>27.04.2015</until>
+  </booking>
+  <booking>
+    <name>Perrone, Francis</name>
+    <birthday>04.07.1965</birthday>
+    <category>Economy</category>
+    <arrangement>Bed &amp; Breakfast</arrangement>
+    <from>22.04.2015</from>
+    <until>29.04.2015</until>
+  </booking>
+  <booking>
+    <name>Gottschalk, Tobias</name>
+    <birthday>25.08.1990</birthday>
+    <category>Economy</category>
+    <arrangement>Bed &amp; Breakfast</arrangement>
+    <from>07.04.2015</from>
+    <until>22.04.2015</until>
+  </booking>
+  <booking>
+    <name>Knat, Hummer</name>
+    <birthday>01.01.1901</birthday>
+    <category>Suite</category>
+    <arrangement>Halbpension</arrangement>
+    <from>08.04.2015</from>
+    <until>22.04.2015</until>
+  </booking>
 </bookings>

@@ -109,6 +109,12 @@ public class GuiMain extends JFrame {
 	private JLabel busiCount;
 	private JLabel suiCount;
 	private JLabel canCount;
+	private JLabel todayCustomers;
+	private JLabel todayCustomersCount;
+	private JLabel todayCheckins;
+	private JLabel todayCheckouts;
+	private JLabel lblCheckins;
+	private JLabel lblCheckouts;
 	
 	
 
@@ -640,6 +646,35 @@ public class GuiMain extends JFrame {
 		canCount.setBounds(210, 135, 46, 14);
 		panel_3.add(canCount);
 		
+		CoreStatistic.CurrentDate();
+		
+		todayCustomers = new JLabel("Heutige Kunden");
+		todayCustomers.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		todayCustomers.setBounds(290, 60, 120, 14);
+		panel_3.add(todayCustomers);
+		
+		todayCustomersCount = new JLabel(""+CoreStatistic.todayCounter);
+		todayCustomersCount.setBounds(410, 60, 46, 14);
+		panel_3.add(todayCustomersCount);
+		
+		lblCheckins = new JLabel("Heutige Anreisen");
+		lblCheckins.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblCheckins.setBounds(290, 85, 120, 14);
+		panel_3.add(lblCheckins);
+		
+		todayCheckins = new JLabel(""+CoreStatistic.todayCheckin);
+		todayCheckins.setBounds(410, 85, 46, 14);
+		panel_3.add(todayCheckins);
+		
+		lblCheckouts = new JLabel("Heutige Abreisen");
+		lblCheckouts.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblCheckouts.setBounds(290, 110, 120, 14);
+		panel_3.add(lblCheckouts);
+		
+		todayCheckouts = new JLabel(""+CoreStatistic.todayCheckout);
+		todayCheckouts.setBounds(410, 110, 46, 14);
+		panel_3.add(todayCheckouts);
+		
 		JButton btnAktualisieren = new JButton("Aktualisieren");
 		CoreStatistic RefButton = new CoreStatistic(this);
 		btnAktualisieren.addActionListener(RefButton);
@@ -704,6 +739,7 @@ public class GuiMain extends JFrame {
 		OverviewUntilYY.setSelectedItem(""+jahr);
 		OverviewFromYY.setSelectedItem(""+jahr);
 		contentPane.setLayout(gl_contentPane);
+		
 	}
 
 	private static void addPopup(Component component, final JPopupMenu popup) {
@@ -1033,5 +1069,29 @@ public class GuiMain extends JFrame {
 
 	public void setCanCount(JLabel canCount) {
 		this.canCount = canCount;
+	}
+
+	public JLabel getTodayCustomersCount() {
+		return todayCustomersCount;
+	}
+
+	public void setTodayCustomersCount(JLabel todayCustomersCount) {
+		this.todayCustomersCount = todayCustomersCount;
+	}
+
+	public JLabel getTodayCheckins() {
+		return todayCheckins;
+	}
+
+	public void setTodayCheckins(JLabel todayCheckins) {
+		this.todayCheckins = todayCheckins;
+	}
+
+	public JLabel getTodayCheckouts() {
+		return todayCheckouts;
+	}
+
+	public void setTodayCheckouts(JLabel todayCheckouts) {
+		this.todayCheckouts = todayCheckouts;
 	}
 }
