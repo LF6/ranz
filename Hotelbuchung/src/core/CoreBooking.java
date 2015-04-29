@@ -93,6 +93,7 @@ public class CoreBooking implements ActionListener {
 				}else{
 					JOptionPane.showMessageDialog(null, "Es ist schon eine Buchung für diesen Kunden vorhanden!\n Bitte löschen Sie diese zuerst!");
 					}
+		}
 		if (actionCommand.equals("Kunden löschen")){
 			
 			int reply1 = JOptionPane.showConfirmDialog(null, "Kunden wirklich löschen?", "löschen", JOptionPane.YES_NO_OPTION);
@@ -130,9 +131,6 @@ public class CoreBooking implements ActionListener {
 				parent.getCancelationCustomer().setModel(GuiMain.comboboxModelBookings);
 				
 			}
-		}
-			
-		
 		}
 	}
 }
