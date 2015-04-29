@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <statistics>
   <bookings>
-    <economy>23</economy>
+    <economy>25</economy>
     <business>11</business>
     <suite>7</suite>
   </bookings>
-  <cancellations>29</cancellations>
+  <cancellations>31</cancellations>
 </statistics>
