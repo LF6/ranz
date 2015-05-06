@@ -27,6 +27,9 @@ public class CoreBooking implements ActionListener {
 	public static String isAvailable;
 	private GuiMain parent;
 	private String customers = "";
+	private int business = 5;
+	private int suite = 5;
+	private int economy = 5;
 	
 	public CoreBooking(GuiMain parent) {
 			super();
@@ -47,20 +50,52 @@ public class CoreBooking implements ActionListener {
 			
 			customers = (String) parent.getComboBox().getSelectedItem();
 			
+			customer = (String) parent.getComboBox().getSelectedItem();
+			category = (String) parent.getJComboBox_1().getSelectedItem();
+			arrangement = (String) parent.getJComboBox_2().getSelectedItem();
+			datefromdd = (String) parent.getJComboBox_3().getSelectedItem();
+			datefrommm = (String) parent.getJComboBox_4().getSelectedItem();
+			datefromyy = (String) parent.getJComboBox_5().getSelectedItem();
+			dateuntildd = (String) parent.getJComboBox_7().getSelectedItem();
+			dateuntilmm = (String) parent.getJComboBox_8().getSelectedItem();
+			dateuntilyy = (String) parent.getJComboBox_6().getSelectedItem();
+			
+			if(category == "Economy"){
+				if(ReadWrite.categoryEconomy.size() < economy){
+					executeBooking();
+				}else{
+					JOptionPane.showMessageDialog(null, "Zimmer dieser Kategorie sind ausgebucht!");
+				}
+					
+			}
+			if(category == "Suite"){
+				if(ReadWrite.categorySuite.size() < suite){
+					executeBooking();
+				}else{
+					JOptionPane.showMessageDialog(null, "Zimmer dieser Kategorie sind ausgebucht!");
+				}
+			}
+			if(category == "Business"){
+				if(ReadWrite.categoryBusiness.size() < business){
+					executeBooking();
+				}else{
+					JOptionPane.showMessageDialog(null, "Zimmer dieser Kategorie sind ausgebucht!");
+				}
+			}
+			
+		}
+		if (actionCommand.equals("Kunden löschen")){
+			deleteCustomer();
+		}
+	}
+			
+			
+			
+	private void executeBooking(){
 			if(GuiMain.comboboxModelBookings.getIndexOf(customers) == -1){		
 					int reply = JOptionPane.showConfirmDialog(null, "Jetzt verbindlich Buchen?", "Buchen", JOptionPane.YES_NO_OPTION);
 			
 					if (reply == JOptionPane.YES_OPTION) {
-						
-						customer = (String) parent.getComboBox().getSelectedItem();
-						category = (String) parent.getJComboBox_1().getSelectedItem();
-						arrangement = (String) parent.getJComboBox_2().getSelectedItem();
-						datefromdd = (String) parent.getJComboBox_3().getSelectedItem();
-						datefrommm = (String) parent.getJComboBox_4().getSelectedItem();
-						datefromyy = (String) parent.getJComboBox_5().getSelectedItem();
-						dateuntildd = (String) parent.getJComboBox_7().getSelectedItem();
-						dateuntilmm = (String) parent.getJComboBox_8().getSelectedItem();
-						dateuntilyy = (String) parent.getJComboBox_6().getSelectedItem();
 						try {
 							try {
 								ReadWrite.WriteBooking();
@@ -93,8 +128,11 @@ public class CoreBooking implements ActionListener {
 				}else{
 					JOptionPane.showMessageDialog(null, "Es ist schon eine Buchung für diesen Kunden vorhanden!\n Bitte löschen Sie diese zuerst!");
 					}
-		}
-		if (actionCommand.equals("Kunden löschen")){
+	}
+		
+			
+	private void deleteCustomer(){
+		
 			
 			int reply1 = JOptionPane.showConfirmDialog(null, "Kunden wirklich löschen?", "löschen", JOptionPane.YES_NO_OPTION);
 			isAvailable = (String) parent.getComboBox().getSelectedItem();
@@ -132,5 +170,4 @@ public class CoreBooking implements ActionListener {
 				
 			}
 		}
-	}
 }

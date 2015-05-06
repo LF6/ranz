@@ -43,6 +43,9 @@ public class ReadWrite {
 	public static List<String> bookingRoom = new ArrayList<String>();
 	public static List<String> cancelBookingList = new ArrayList<String>();
 	public static List<String> customerList = new ArrayList<String>();
+	public static List<String> categorySuite = new ArrayList<String>();
+	public static List<String> categoryBusiness = new ArrayList<String>();
+	public static List<String> categoryEconomy = new ArrayList<String>();
 	public static byte whichFunction = 0;
 	public static byte ReadBdayForBooking;
 	public static int economyCount;
@@ -131,6 +134,26 @@ public class ReadWrite {
 			String fulln = names.getChildText("name");
 				cancelBookingList.add(fulln);
 			}
+		
+		List<Element> catB = root2.getChildren("booking");
+		for(Element categories : catB){
+			String cat = categories.getChildText("category");
+			if(cat.equals("Economy")){
+				int i=1;
+				categoryEconomy.add(cat+i);
+				i++;
+			}
+			if(cat.equals("Business")){
+				int j=1;
+				categoryBusiness.add(cat+j);
+				j++;
+			}
+			if(cat.equals("Suite")){
+				int k=1;
+				categorySuite.add(cat);
+				k++;
+			}
+		}
 		} catch (JDOMException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
