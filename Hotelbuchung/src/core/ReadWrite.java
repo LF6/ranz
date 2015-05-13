@@ -7,16 +7,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Iterator;
+import java.util.Collections;
 import java.util.List;
-import java.util.ListIterator;
-import java.util.Vector;
 
 import javax.swing.JOptionPane;
 
-import org.jdom2.Attribute;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.JDOMException;
@@ -119,45 +114,47 @@ public class ReadWrite {
 			Element root = document.getRootElement();
 			fis.close();
 			
-		List<Element> cList = root.getChildren("cust");
-		for(Element names : cList){
-			String fulln = names.getChildText("name");
-				customerList.add(fulln);
+			List<Element> cList = root.getChildren("cust");
+			for(Element names : cList){
+				String fulln = names.getChildText("name");
+					customerList.add(fulln);
+				}
+	
+				document2 = builder2.build(fis2);
+				Element root2 = document2.getRootElement();
+				fis2.close();
+			
+			List<Element> bList = root2.getChildren("booking");
+			for(Element names : bList){
+				String fulln = names.getChildText("name");
+					cancelBookingList.add(fulln);
+				}
+			
+			List<Element> catB = root2.getChildren("booking");
+			for(Element categories : catB){
+				String cat = categories.getChildText("category");
+				if(cat.equals("Economy")){
+					int i=1;
+					categoryEconomy.add(cat+i);
+					i++;
+				}
+				if(cat.equals("Business")){
+					int j=1;
+					categoryBusiness.add(cat+j);
+					j++;
+				}
+				if(cat.equals("Suite")){
+					int k=1;
+					categorySuite.add(cat);
+					k++;
+				}
 			}
-
-			document2 = builder2.build(fis2);
-			Element root2 = document2.getRootElement();
-			fis2.close();
-		
-		List<Element> bList = root2.getChildren("booking");
-		for(Element names : bList){
-			String fulln = names.getChildText("name");
-				cancelBookingList.add(fulln);
-			}
-		
-		List<Element> catB = root2.getChildren("booking");
-		for(Element categories : catB){
-			String cat = categories.getChildText("category");
-			if(cat.equals("Economy")){
-				int i=1;
-				categoryEconomy.add(cat+i);
-				i++;
-			}
-			if(cat.equals("Business")){
-				int j=1;
-				categoryBusiness.add(cat+j);
-				j++;
-			}
-			if(cat.equals("Suite")){
-				int k=1;
-				categorySuite.add(cat);
-				k++;
-			}
-		}
 		} catch (JDOMException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		Collections.sort(customerList);
+		Collections.sort(cancelBookingList);
 	} 
 	
 	public static void WriteBooking() throws IOException, JDOMException {

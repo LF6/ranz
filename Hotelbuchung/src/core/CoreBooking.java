@@ -98,6 +98,9 @@ public class CoreBooking implements ActionListener {
 					if (reply == JOptionPane.YES_OPTION) {
 						try {
 							try {
+								ReadWrite.categoryBusiness.clear();
+								ReadWrite.categoryEconomy.clear();
+								ReadWrite.categorySuite.clear();
 								ReadWrite.WriteBooking();
 								ReadWrite.ReadFromFile();
 								

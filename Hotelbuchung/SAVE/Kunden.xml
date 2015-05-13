@@ -63,11 +63,4 @@
     <street>Keineahnung 8</street>
     <city>38361 weißichauchned</city>
   </cust>
-  <cust>
-    <gender>Herr</gender>
-    <name>asdf, asdf</name>
-    <birthday>01.01.1901</birthday>
-    <street>asdf as</street>
-    <city>asdfs asfd</city>
-  </cust>
 </customer>
