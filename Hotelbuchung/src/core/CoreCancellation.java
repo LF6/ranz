@@ -32,7 +32,7 @@ public class CoreCancellation implements ActionListener {
 	
 		if (actionCommand.equals("Stornieren")){
 			
-			int reply = JOptionPane.showConfirmDialog(null, "Stornierung löschen?", "corecanel", JOptionPane.YES_NO_OPTION);
+			int reply = JOptionPane.showConfirmDialog(null, "Stornierung durchführen?", "corecanel", JOptionPane.YES_NO_OPTION);
 			
 				if (reply == JOptionPane.YES_OPTION) {
 				

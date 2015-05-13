@@ -58,8 +58,8 @@ public class CoreRegister implements ActionListener {
 			dd = (String) parent.getJComboBox_10().getSelectedItem();
 			mm = (String) parent.getJComboBox_9().getSelectedItem();
 			yy = (String) parent.getJComboBox_11().getSelectedItem();
-			if (surname.length() == 0 || name.length() == 0){
-				JOptionPane.showMessageDialog(null, "Leider nein Leider gar nicht");
+			if (surname.length() == 0 || name.length() == 0 || street.length() == 0 || city.length() == 0 || nr.length() == 0 || plz.length() == 0){
+				JOptionPane.showMessageDialog(null, "Bitte geben Sie Ihre vollständige Kontaktdaten an!");
 			} else {
 				try {
 					ReadWrite.whichFunction = 1;

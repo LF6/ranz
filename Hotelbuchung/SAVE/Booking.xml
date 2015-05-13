@@ -56,4 +56,12 @@
     <from>08.04.2015</from>
     <until>22.04.2015</until>
   </booking>
+  <booking>
+    <name>Super, Audo</name>
+    <birthday>01.01.1901</birthday>
+    <category>Economy</category>
+    <arrangement>Bed &amp; Breakfast</arrangement>
+    <from>13.05.2015</from>
+    <until>13.05.2015</until>
+  </booking>
 </bookings>
