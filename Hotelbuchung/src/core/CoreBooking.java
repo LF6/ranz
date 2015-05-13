@@ -61,7 +61,7 @@ public class CoreBooking implements ActionListener {
 			dateuntilyy = (String) parent.getJComboBox_6().getSelectedItem();
 			
 			if(category == "Economy"){
-				if(ReadWrite.categoryEconomy.size() < economy){
+				if(ReadWrite.categoryEconomy.size() <= economy){
 					executeBooking();
 				}else{
 					JOptionPane.showMessageDialog(null, "Zimmer dieser Kategorie sind ausgebucht!");
@@ -69,14 +69,14 @@ public class CoreBooking implements ActionListener {
 					
 			}
 			if(category == "Suite"){
-				if(ReadWrite.categorySuite.size() < suite){
+				if(ReadWrite.categorySuite.size() <= suite){
 					executeBooking();
 				}else{
 					JOptionPane.showMessageDialog(null, "Zimmer dieser Kategorie sind ausgebucht!");
 				}
 			}
 			if(category == "Business"){
-				if(ReadWrite.categoryBusiness.size() < business){
+				if(ReadWrite.categoryBusiness.size() <= business){
 					executeBooking();
 				}else{
 					JOptionPane.showMessageDialog(null, "Zimmer dieser Kategorie sind ausgebucht!");
@@ -131,6 +131,11 @@ public class CoreBooking implements ActionListener {
 				}else{
 					JOptionPane.showMessageDialog(null, "Es ist schon eine Buchung für diesen Kunden vorhanden!\n Bitte löschen Sie diese zuerst!");
 					}
+			try {
+				ReadWrite.ReadFromFile();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 	}
 		
 			
@@ -171,6 +176,11 @@ public class CoreBooking implements ActionListener {
 				}
 				parent.getCancelationCustomer().setModel(GuiMain.comboboxModelBookings);
 				
+			}
+			try {
+				ReadWrite.ReadFromFile();
+			} catch (IOException e) {
+				e.printStackTrace();
 			}
 		}
 }
